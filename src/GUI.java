@@ -38,7 +38,6 @@ public class GUI extends JFrame
         // Create and configure a panel to append items to
         final JPanel expPanel1 = new JPanel();
         expPanel1.setLayout(experimentLayout);
-        expPanel1.setFont(font);
 
         // Create menu bar and items
         JMenuBar mb = new JMenuBar();
@@ -67,18 +66,32 @@ public class GUI extends JFrame
         // Setup the second panel
         final JPanel expPanel2 = new JPanel();
         expPanel2.setLayout(new GridLayout(2,3));
-        expPanel2.setFont(font);
-
+    
         // Create and configure text fields
-        TextField text1 = new TextField("0.0");
-        TextField text2 = new TextField("0.0");
-        TextField text3 = new TextField("0.0");
+        JTextField text1 = new JTextField("0.0");
+        JTextField text2 = new JTextField("0.0");
+        JTextField text3 = new JTextField("0.0");
+        text1.setHorizontalAlignment(JTextField.CENTER);
+        text2.setHorizontalAlignment(JTextField.CENTER);
+        text3.setHorizontalAlignment(JTextField.CENTER);
+        text1.setFont(font);
+        text2.setFont(font);
+        text3.setFont(font);
         text3.setEditable(false);
         
         // Add display segments to the panel
-        expPanel2.add(new Label("Variable 1"));
-        expPanel2.add(new Label("Variable 2"));
-        expPanel2.add(new Label("Result"));
+        JLabel label1 = new JLabel("  Input A  ");
+        JLabel label2 = new JLabel("  Input B  ");
+        JLabel label3 = new JLabel("  Output C  ");
+        label1.setHorizontalAlignment(JTextField.CENTER);
+        label2.setHorizontalAlignment(JTextField.CENTER);
+        label3.setHorizontalAlignment(JTextField.CENTER);
+        label1.setFont(font);
+        label2.setFont(font);
+        label3.setFont(font);
+        expPanel2.add(label1);
+        expPanel2.add(label2);
+        expPanel2.add(label3);
         expPanel2.add(text1);
         expPanel2.add(text2);
         expPanel2.add(text3);
