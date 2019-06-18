@@ -148,6 +148,8 @@ public class GUI extends JFrame
         // Create and set up the window.
         GUI frame = new GUI("Calculator");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        ImageIcon icon = new ImageIcon("..\\bin\\icon.png");
+        frame.setIconImage(icon.getImage());
 
         // Set up the content pane.
         frame.addComponentsToPane(frame.getContentPane());
