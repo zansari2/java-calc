@@ -3,7 +3,7 @@
 A simple calculator java project
 
 
-##![Example: Java Calculator](screenshots/calc.png)
+![Example: Java Calculator](screenshots/calc.png)
 
 
 ## AUTHOR
