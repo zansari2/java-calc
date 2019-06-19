@@ -1,6 +1,10 @@
 import java.awt.*;
 import java.awt.event.*;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 import javax.swing.*;
+import javax.swing.text.NumberFormatter;
 
 /**
  * Creates a GUI that impliments the calculator
@@ -68,8 +72,13 @@ public class GUI extends JFrame
         expPanel2.setLayout(new GridLayout(2,3));
     
         // Create and configure text fields
-        JTextField text1 = new JTextField("0.0");
-        JTextField text2 = new JTextField("0.0");
+        NumberFormat format = new DecimalFormat("#0.00");
+        NumberFormatter formatter = new NumberFormatter(format);
+        formatter.setValueClass(Double.class);
+        formatter.setAllowsInvalid(false);
+        formatter.setCommitsOnValidEdit(true);
+        JFormattedTextField text1 = new JFormattedTextField(formatter);
+        JFormattedTextField text2 = new JFormattedTextField(formatter);
         JTextField text3 = new JTextField("0.0");
         text1.setHorizontalAlignment(JTextField.CENTER);
         text2.setHorizontalAlignment(JTextField.CENTER);
@@ -146,7 +155,7 @@ public class GUI extends JFrame
             }
         });
 
-        //Add panel to pane
+        // Add panel to pane
         pane.add(expPanel2, BorderLayout.CENTER);
         pane.add(expPanel1, BorderLayout.SOUTH);
         pane.add(mb, BorderLayout.NORTH);

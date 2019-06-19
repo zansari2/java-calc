@@ -58,7 +58,7 @@ public class Calculator
      */
     public double sum()
     {
-        return getVar1()+getVar2();
+        return Math.round((getVar1()+getVar2())*100)/100.0;
     }
     /**
      * Subtracts var1 by var2
@@ -66,7 +66,7 @@ public class Calculator
      */
     public double diff()
     {
-        return getVar1()-getVar2();
+        return Math.round((getVar1()-getVar2())*100)/100.0;
     }
     /**
      * Multiplies the current variables
@@ -74,7 +74,7 @@ public class Calculator
      */
     public double prod()
     {
-        return getVar1()*getVar2();
+        return Math.round((getVar1()*getVar2())*100)/100.0;
     }
     /**
      * Divides the current variables
@@ -82,7 +82,7 @@ public class Calculator
      */
     public double quot()
     {
-        return getVar1()/getVar2();
+        return Math.round(100.0*getVar1()/getVar2())/100.0;
     }
     // Main
     public static void main(String[] args) 
