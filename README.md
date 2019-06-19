@@ -2,9 +2,9 @@
 
 A simple calculator java project
 
-<!---
-##![Example: Java Calculator](Screenshots/screenshot.png)
--->
+
+##![Example: Java Calculator](Screenshots/calc.png)
+
 
 ## AUTHOR
 
@@ -12,7 +12,7 @@ A simple calculator java project
 
 ## CONTACT
 
-Pierre-Henry SORIA: zishan.za [AT] gmail [D0T] com
+Zishan Ansari: zishan.za [AT] gmail [D0T] com
 
 ## LICENSE
 
